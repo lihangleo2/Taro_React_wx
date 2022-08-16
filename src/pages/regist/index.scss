@@ -1,0 +1,82 @@
+.regist {
+    width: 100vw;
+    height: 100vh;
+
+    .layout_out {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 50px;
+        // background: #ff0000;
+
+        .regist_btn {
+            margin-top: 100px;
+            height: 81px;
+            font-size: 34px;
+            font-family: PingFang SC-Bold, PingFang SC;
+            font-weight: 600;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 81px;
+            background: #E6E6E6;
+            border-radius: 41px;
+
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, #FF716F 0%, #FB5555 100%);
+        }
+
+
+        .checkBox {
+            margin-top: 50px;
+            font-size: 25px;
+
+            .blue_text {
+                color: #006eff;
+            }
+        }
+
+        .remind_text {
+            padding: 20px;
+            margin-top: 50px;
+            background: #f0f0f0;
+            font-size: 25px;
+        }
+
+
+        .input {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            // background: #ff0000;
+            border: 1px solid #000;
+            height: 90px;
+
+            .width{
+                flex: 1;
+            }
+
+            .codeBtn{
+                margin-right: 20px;
+                height: 60px;
+                width: 160px;
+                border: 1px solid rgb(139, 139, 139);
+                border-radius: 50vh;
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .image {
+            padding: 30px;
+            width: 35px;
+            height: 35px;
+        }
+
+
+        .input_margin {
+            margin-top: 50px;
+        }
+    }
+}

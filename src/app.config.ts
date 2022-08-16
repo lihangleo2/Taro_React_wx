@@ -4,6 +4,9 @@ export default defineAppConfig({
     'pages/home/index',
     'pages/task/index',
     'pages/taskCenter/index',
+    'pages/regist/index',
+    'pages/robotlist/index',
+    'pages/scanrobot/index',
   ],
   tabBar: {
     // custom: true,
@@ -27,9 +30,13 @@ export default defineAppConfig({
     ],
   },
   window: {
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
+
+    navigationBarBackgroundColor: "#fff", //导航栏背景颜色
+    navigationBarTextStyle: "black", //导航栏标题颜色，仅支持 black / white
+    navigationBarTitleText: "", //导航栏标题文字内容
+    navigationStyle: "default", //导航栏样式，仅支持以下值：default 默认样式；custom 自定义导航栏，只保留右上角胶囊按钮
+    backgroundColor: "#fff", //窗口的背景色
+    backgroundTextStyle: "dark", //下拉 loading 的样式，仅支持 dark / light
+    
   }
 })
