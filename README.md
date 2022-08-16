@@ -30,12 +30,16 @@ Taro+React架构开发微信小程序
 export default observer(Home);
 ```
 
-##二、自定义tabbar教程
-在app.config.ts文件tabBar加上如下标签：
+## 二、自定义tabbar教程（在custom_tab_bar分支上）
+1、在app.config.ts文件tabBar加上如下标签：
 ```xml
 tabBar: {
     custom: true,
 }
 ```
+
+2、然后添加custom-tab-bar文件夹（这里切换tab用到了mobx状态管理）
+
+3、直接运行就搞定了，关键点在app.config.ts里设置custom:true
 
 
