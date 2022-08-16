@@ -1,8 +1,8 @@
 export default defineAppConfig({
+  //这里第一个位置，可以决定小程序先切换的页面
   pages: [
-    'pages/task/index',
-    'pages/game/index',
     'pages/home/index',
+    'pages/task/index',
     'pages/taskCenter/index',
   ],
   tabBar: {
