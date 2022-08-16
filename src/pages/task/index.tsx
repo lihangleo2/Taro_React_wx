@@ -2,8 +2,10 @@
 import Taro, { getCurrentInstance, getCurrentPages, useDidShow } from '@tarojs/taro'
 import { Component, useState } from 'react'
 import { View, Text, Swiper, SwiperItem, Button } from '@tarojs/components'
-import './index.scss'
+import { observer } from 'mobx-react';
 import { PagesPath } from "../../config/pagePath";
+import { useStores } from '../../hooks/index';
+import './index.scss'
 
 interface Props {
   test: string
@@ -11,6 +13,15 @@ interface Props {
 
 
 function Home() {
+
+  const {
+    MyStore: {
+      testNumber,
+      changeTestNumber,
+    }
+  } = useStores();
+
+
   useDidShow(() => {
     // const data = Taro.getCurrentInstance().page?.data
     // console.log("============>data page ",data!.keyData);
@@ -49,7 +60,7 @@ function Home() {
 
 
   function navigateTo() {
-    Taro.setStorageSync('test', {kkk:"test is ok!"});
+    Taro.setStorageSync('test', { kkk: "test is ok!" });
     Taro.navigateTo({
       url: `${PagesPath.taskCenter}?isFromTimer=true&taskId=32`,
       events: {
@@ -66,6 +77,12 @@ function Home() {
     })
   }
 
+
+  function logNums() {
+    console.log('====================================');
+    console.log(testNumber);
+    console.log('====================================');
+  }
 
 
 
@@ -88,7 +105,7 @@ function Home() {
         <View className='text'>1</View>
         <Button onClick={() => { navigateTo() }}>点击3跳转</Button>
       </SwiperItem>        <SwiperItem>
-        <View className='text'>2</View>
+        <Button onClick={() => { logNums() }}>获取mobx数据</Button>
       </SwiperItem>        <SwiperItem>
         <View className='text'>3</View>
       </SwiperItem>
@@ -102,4 +119,4 @@ definePageConfig({
   navigationStyle: 'default'
 })
 
-export default Home;
+export default observer(Home) ;

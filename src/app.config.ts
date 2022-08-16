@@ -6,6 +6,7 @@ export default defineAppConfig({
     'pages/taskCenter/index',
   ],
   tabBar: {
+    // custom: true,
     color: "#B7B7B7", //tab 上的文字默认颜色，仅支持十六进制颜色
     selectedColor: "#FF716F", //tab 上的文字选中时的颜色，仅支持十六进制颜色
     backgroundColor: "#FFFFFF", //tab 的背景色，仅支持十六进制颜色
