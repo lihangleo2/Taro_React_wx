@@ -1,7 +1,3 @@
-# Taro_React_wx
-Taro+React架构开发微信小程序
-//20220816 测试 taro+react go and finsh
-
 
 # Taro_React_wx
 Taro+React架构开发微信小程序
@@ -42,5 +38,4 @@ tabBar: {
 }
 ```
 
-我继续修改试试
 
