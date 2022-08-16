@@ -52,6 +52,6 @@ function Home() {
 }
 definePageConfig({
     navigationBarTitleText: '首页',
-    navigationStyle: 'default'
+    navigationStyle: 'default',
 });
 export default observer(Home);
