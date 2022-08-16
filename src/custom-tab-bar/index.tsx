@@ -6,7 +6,7 @@ import { PagesPath } from '../config/pagePath';
 import { useStores } from '../hooks/index';
 import "./index.scss"
 
-
+//自定义tab标签
 function Index() {
 
     const {
