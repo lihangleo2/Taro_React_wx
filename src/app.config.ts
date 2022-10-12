@@ -1,12 +1,15 @@
 export default defineAppConfig({
   //这里第一个位置，可以决定小程序先切换的页面
   pages: [
+    'pagesDemo/home/index',
     'pages/home/index',
     'pages/task/index',
     'pages/taskCenter/index',
     'pages/regist/index',
     'pages/robotlist/index',
     'pages/scanrobot/index',
+    'pagesDemo/lifeHook/index',
+
   ],
   tabBar: {
     // custom: true,
@@ -16,16 +19,16 @@ export default defineAppConfig({
     borderStyle: "black", //tabbar 上边框的颜色， 仅支持 black / white
     list: [
       {
+        pagePath: "pagesDemo/home/index",
+        text: "demo页",
+        iconPath: "./assets/img/tab_setting.png",
+        selectedIconPath: "./assets/img/tab_setting_selected.png",
+      },
+      {
         pagePath: "pages/home/index",
         text: "首页",
         iconPath: "./assets/img/tab_robot.png",
         selectedIconPath: "./assets/img/tab_robot_selected.png",
-      },
-      {
-        pagePath: "pages/task/index",
-        text: "任务",
-        iconPath: "./assets/img/tab_setting.png",
-        selectedIconPath: "./assets/img/tab_setting_selected.png",
       },
     ],
   },

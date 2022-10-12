@@ -14,6 +14,8 @@ Taro+React架构开发微信小程序
 npm add mobx
 npm add mobx-react
 
+### 1.4、tsx文件里输入wx会自动输入代码模板(vscode做了代码配置)
+
 
 ## 二、项目结构介绍
 ### 2.1、【action】
@@ -44,7 +46,7 @@ import login_show_text from "../../assets/img/login_show_text.png";
 ### 2.5、【hooks】
 自定义的hook方式，用以搭配mobx使用，即在整个项目中用hook的方式拿到mobx的状态在全局使用。(在demo中【store】包下定义了myStore.tsx进行了mobx状态管理，当然可以定义多个hook方法，如果能力达到的话，用index.ts进行返回。mobx状态管理有点类似android中的全局单例，可以再全局中拿状态使用)
 
-### 2.6、【pages】存放业务代码
+### 2.6、【pages】存放业务代码;【pagesDemo】存放demo的一些页面
 
 ### 2.7、【store】
 mobx状态管理，有点类似android中的静态单例，可以再全局中都能拿到状态使用。当然这里的store可以定义多个，并用index.tsx进行返回

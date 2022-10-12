@@ -1,0 +1,27 @@
+.lifeHook {
+    padding: 25px;
+
+    .text_title {
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .text_content {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .text_title_second {
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .input_style {
+        height: 100px;
+        border: 1px solid rgb(139, 139, 139);
+        border-radius: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
