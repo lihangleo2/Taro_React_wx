@@ -24,7 +24,7 @@ npm add mobx-react
 
 ### 2.3、【assets\img】 
 一些本地图片的使用，tabbar上的图片。本demo中暂时把用的图片放在这里，真正要用的时候，是放在oss里的。
-
+```xml
 本地图片的使用：
 导入本地图片
 import login_show_text from "../../assets/img/login_show_text.png";
@@ -35,7 +35,8 @@ import login_show_text from "../../assets/img/login_show_text.png";
 <Image className='image'  src={"https....png"}></Image>
 当然我们可以封装一下，直接使用如下：
 <Image className="noTask_img" src={getOssPath("20220815/robot_inline.png")}></Image>
-                    
+```
+            
 ### 2.4、【config】
 自定义的路由地址，写在这里的意思是，在页面中使用的时候不要总是引用全路径。项目的路由地址其实是要在app.config.ts里写上的
 
