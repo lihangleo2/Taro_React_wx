@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Image, Input, Radio, Text, View } from '@tarojs/components'
 import { showTextToast } from "../../utils/toolUtil";
+import login_show_pwd from "../../assets/img/login_show_pwd.png";
+import login_show_text from "../../assets/img/login_show_text.png";
 import "./index.scss";
 
 /**
@@ -8,9 +10,6 @@ import "./index.scss";
  * @returns 
  */
 function Regist() {
-    //本地使用图片
-    const login_show_pwd ="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAANlBMVEUAAADPz8/MzMzPz8/Ly8vMzMzPz8/MzMzMzMzLy8vMzMzMzMzMzMzMzMzNzc3Nzc3Nzc3MzMwwGUIqAAAAEXRSTlMAMPAggKAQP+DP0LBQwGB/bwOyYe4AAADKSURBVDjL1VNbEoQgDLMFeSty/8tuXe1UYBmd/TNfETNJC+30foBNOVkY/jfbguUALpv5oVBzqTGr1iOXHtlUJp7PQ9Qx8Ie/WAGKf5WL0EowTYwVWdS4pKN7+IrY6XD2HETcOiJuV3Gc3yWaK1QkOSmJFB9r6pqTAundyR3xwGmGbCQKShGjKEZOKEUx7KUGJzQOfaQe39TjpZ4nfUkDM3Ho7md5es8iwnXwXrfvzlAyMjFHGSZVzaEuHVCb+3n+Zy9kv/S+X6/HB/+jHfqJkt6AAAAAAElFTkSuQmCC"
-    const login_show_text ="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAjCAMAAAAkGTMsAAAAeFBMVEUAAADMzMzMzMzMzMzLy8vMzMzMzMzMzMzLy8vMzMzNzc3Z2dnMzMzMzMzMzMzMzMzg4ODMzMzMzMzMzMzLy8vLy8vMzMzMzMzJycnMzMzMzMzMzMzNzc3MzMzMzMzMzMzLy8vLy8vMzMzMzMzMzMzLy8vJycnMzMyBkS4JAAAAJ3RSTlMA8Pr18uvn0cqxGwfGi4WAAeLDVDox7s0n3dS2p5VwamBaTUAsqBPjfqebAAABAUlEQVQ4y+2R2VLDMAxFJdtxs+9paenewv3/P0SOEwi06QDPPZOZXHuON4me/JGX3whHEz6WVuZIZIHwoQRUCeUay/28tF9C5/LfAEE2J2UBsHChDESL7ktRBdghi4ZVe+u0oQKCcdRB4G37w3ljALocxzv0cFh0iZ9JuiJkOBSNaCBVCkKg0kUqn+LeUBr6NEhnA75IRQy+YXRBa/dCz+twxcYtxwg3MnVQYN/B0gJ9va4MkxVRXUeFLDT9/RSwo55D5Xc9SZnf/VTD0LEL268jz/61udvAE2t/IpWbtdhT6knfGch9utKNlX22Bphp2sVWyZhja2O6TzfJSUxP/s0HRXQYGMpS+isAAAAASUVORK5CYII="
     
     //============
     const [isChecked, setIsChecked] = useState<boolean>(false);
