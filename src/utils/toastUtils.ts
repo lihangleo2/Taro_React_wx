@@ -9,7 +9,7 @@ import Taro from "@tarojs/taro";
 export function showToast(str: string, model: number = 0) {
   return Taro.showToast({
     title: str,
-    icon: model === 0 ? "success" : "error",
+    icon: model === 1 ? "success" : "error",
     duration: 2000,
   });
 }
@@ -28,47 +28,61 @@ export function showTextToast(str: string) {
 }
 
 /**
- * 轻提示
- * @param str  显示文字
- * @param model  显示succeed 还是 error
- * @returns
+ * 模态弹窗
  */
-export function showMessage(str: string, level: number = 0) {
-  var type: "info" | "success" | "error" | "warning" = "info";
-  switch (level) {
-    case 0:
-      type = "info";
-      break;
-    case 1: //成功消息
-      type = "success";
-      break;
-    case 2:
-      type = "error";
-      break;
-    case 3:
-      type = "warning";
-      break;
-  }
-  return Taro.atMessage({
-    message: str,
-    type: type,
+export function showModal(
+  title: string,
+  content: string,
+  confirmFun,
+  cancleFun
+) {
+  return Taro.showModal({
+    title: title,
+    content: content,
+    success: function (res) {
+      if (res.confirm) {
+        if (confirmFun instanceof Function) {
+          confirmFun();
+        }
+      } else if (res.cancel) {
+        if (cancleFun instanceof Function) {
+          cancleFun();
+        }
+      }
+    },
   });
 }
 
-export function LogDebug(...str) {
-  console.log("==================DEBUG==================");
-  console.log(str);
-  console.log("=========================================");
+export function showLoading(loadingMsg: string) {
+  return Taro.showLoading({
+    mask: true,
+    title: loadingMsg,
+  });
 }
 
-export function LogInfo(...str) {
-  console.log("==================INFO==================");
-  console.log(str);
-  console.log("=========================================");
+export function hideLoading() {
+  return Taro.hideLoading();
 }
 
-export function LogERROR(...str) {
-  console.log("==================ERROR==================");
-  console.log(str);
-  console.log("=========================================");
+/**
+ * 一个底部的选择框：有点类似android底部弹出的是，拍摄 or 相册
+ */
+export function showActionSheet(
+  list: string[],
+  confirmFun,
+  cancleFun
+) {
+  return Taro.showActionSheet({
+    itemList: list,
+    success: function (res) {
+      if (confirmFun instanceof Function) {
+        confirmFun(res.tapIndex);
+      }
+    },
+    fail: function (res) {
+      if (cancleFun instanceof Function) {
+        cancleFun();
+      }
+    },
+  });
 }

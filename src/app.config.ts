@@ -9,6 +9,7 @@ export default defineAppConfig({
     'pagesDemo/lifeHook/index',
     'pagesDemo/valuePass/index',
     'pagesDemo/valuePassSon/index',
+    'pagesDemo/toastUi/index',
   ],
   tabBar: {
     // custom: true,

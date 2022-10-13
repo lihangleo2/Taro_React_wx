@@ -7,4 +7,7 @@ export const PagesPath = {
   lifeHook: '/pagesDemo/lifeHook/index',
   valuePass: '/pagesDemo/valuePass/index',
   valuePassSon: '/pagesDemo/valuePassSon/index',
+  toastUi: '/pagesDemo/toastUi/index',
+  //注意这里是，联网拦截器拦截后，token失效，以及刷新token失效后，跳转到登录页面
+  login: '/pagesDemo/toastUi/index',
 }

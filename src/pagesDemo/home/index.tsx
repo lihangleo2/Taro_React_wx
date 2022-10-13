@@ -33,6 +33,7 @@ function DemoHome() {
       <Button className='button_text' onClick={() => navigateTo(PagesPath.regist)}>跳转注册(是否显示密码，验证码倒计时等用法)</Button>
       <Button className='button_text' onClick={() => navigateTo(PagesPath.robotlist)}>跳转列表(列表的所有用法)</Button>
       <Button className='button_text' onClick={() => navigateTo(PagesPath.scanrobot)}>跳转input的一些用法</Button>
+      <Button className='button_text' onClick={() => navigateTo(PagesPath.toastUi)}>showToast的用法</Button>
     </View>
   );
 }
