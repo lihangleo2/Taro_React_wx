@@ -19,20 +19,20 @@ function DemoHome() {
   }
 
   return (
-    <View>
-      <Button onClick={() => navigateTo(PagesPath.lifeHook)}>
+    <View className='home'>
+      <Button className='button_text' onClick={() => navigateTo(PagesPath.lifeHook)}>
         hook生命周期，函数组件开发介绍
       </Button>
-      <Button onClick={() => navigateTo(PagesPath.valuePass)}>
+      <Button className='button_text' onClick={() => navigateTo(PagesPath.valuePass)}>
         各种页面间的传值
       </Button>
       {/* mobx类似于全局的单利，当前的MyStore挂载在全局，那么当改变里面的值时，别的地方都能获取到 */}
-      <Button onClick={setMoxValueAndGo}>
+      <Button className='button_text' onClick={setMoxValueAndGo}>
         mobx实现传值(全局单例)，点击设置值并跳转
       </Button>
-      <Button onClick={() => navigateTo(PagesPath.regist)}>跳转注册界面</Button>
-      <Button onClick={() => navigateTo(PagesPath.robotlist)}>跳转到扫描机器人列表</Button>
-      <Button onClick={() => navigateTo(PagesPath.scanrobot)}>跳转到扫描机器人添加页面</Button>
+      <Button className='button_text' onClick={() => navigateTo(PagesPath.regist)}>跳转注册(是否显示密码，验证码倒计时等用法)</Button>
+      <Button className='button_text' onClick={() => navigateTo(PagesPath.robotlist)}>跳转列表(列表的所有用法)</Button>
+      <Button className='button_text' onClick={() => navigateTo(PagesPath.scanrobot)}>跳转input的一些用法</Button>
     </View>
   );
 }

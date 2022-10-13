@@ -1,7 +1,8 @@
 import { Image, View } from '@tarojs/components'
 import React, { useEffect } from 'react';
 import Taro, { usePullDownRefresh, useReachBottom } from '@tarojs/taro';
-import { showTextToast } from "../../utils/toolUtil";
+import { showTextToast } from "../../utils/toastUtils";
+import login_show_pwd from "../../assets/img/login_show_pwd.png";
 import "./index.scss";
 
 
@@ -11,7 +12,6 @@ import "./index.scss";
  */
 function RobotList() {
 
-  const login_show_pwd ="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAANlBMVEUAAADPz8/MzMzPz8/Ly8vMzMzPz8/MzMzMzMzLy8vMzMzMzMzMzMzMzMzNzc3Nzc3Nzc3MzMwwGUIqAAAAEXRSTlMAMPAggKAQP+DP0LBQwGB/bwOyYe4AAADKSURBVDjL1VNbEoQgDLMFeSty/8tuXe1UYBmd/TNfETNJC+30foBNOVkY/jfbguUALpv5oVBzqTGr1iOXHtlUJp7PQ9Qx8Ie/WAGKf5WL0EowTYwVWdS4pKN7+IrY6XD2HETcOiJuV3Gc3yWaK1QkOSmJFB9r6pqTAundyR3xwGmGbCQKShGjKEZOKEUx7KUGJzQOfaQe39TjpZ4nfUkDM3Ho7md5es8iwnXwXrfvzlAyMjFHGSZVzaEuHVCb+3n+Zy9kv/S+X6/HB/+jHfqJkt6AAAAAAElFTkSuQmCC"
   //列表
   const tabList = [
     {
@@ -30,22 +30,7 @@ function RobotList() {
       style: "Vista-v5",
     },
   ]
-  //对象
-  const tabBean = {
-    color: "#B7B7B7",
-    selectedColor: "#FF716F",
-    list: [
-      {
-        text: "游戏1",
-      },
-      {
-        text: "游戏2",
-      },
-      {
-        text: "游戏3",
-      },
-    ],
-  };
+
 
   usePullDownRefresh(() => {
     console.log('====================================');

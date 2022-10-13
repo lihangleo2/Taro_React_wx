@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Image, Input, Radio, Text, View } from '@tarojs/components'
-import { showTextToast } from "../../utils/toolUtil";
+import { showTextToast } from "../../utils/toastUtils";
 import login_show_pwd from "../../assets/img/login_show_pwd.png";
 import login_show_text from "../../assets/img/login_show_text.png";
 import "./index.scss";
