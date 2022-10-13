@@ -3,9 +3,9 @@ export default defineAppConfig({
   pages: [
     'pagesDemo/home/index',
     'pages/home/index',
-    'pages/regist/index',
-    'pages/robotlist/index',
-    'pages/scanrobot/index',
+    'pagesDemo/regist/index',
+    'pagesDemo/robotlist/index',
+    'pagesDemo/scanrobot/index',
     'pagesDemo/lifeHook/index',
     'pagesDemo/valuePass/index',
     'pagesDemo/valuePassSon/index',

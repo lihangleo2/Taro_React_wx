@@ -1,12 +1,15 @@
 import { Button, View } from "@tarojs/components";
 import { getCurrentInstance, getCurrentPages, useDidShow, useRouter } from "@tarojs/taro";
 import React, { useState } from "react";
+import { spKey } from "../../config/spKey";
+import { getSp } from "../../utils/storageUtil";
 import { navigateBack } from "../../utils/navigateUtils";
 import "./index.scss";
 
 function ValuePassSon() {
   const [passStr, setPassStr] = useState<string>("");
   const [passStrbyUrl, setPassStrbyUrl] = useState<string>("");
+  const [passStrbyStore, setPassStrbyStore] = useState<string>("");
 
   /**
    * 【1】获取父页面传递来的数据(通过Taro事件)
@@ -61,6 +64,14 @@ function ValuePassSon() {
     navigateBack()
   }
 
+
+  /**
+   * 【5】获取父页面存储值传递的数据
+   */
+  function getPassValueByStore(){
+    setPassStrbyStore(getSp(spKey.passValue))
+  }
+
   return (
     <View className='valuePassSon'>
       <View className='text_title'>1、获取父页面传递的数据(通过Taro事件)</View>
@@ -73,6 +84,7 @@ function ValuePassSon() {
         获取到的数据：{passStrbyUrl}
       </View>
       <Button className='button_margin' onClick={passToFatherByUrl}>4、向父页面传递数据(url方式)</Button>
+      <Button className='button_margin' onClick={getPassValueByStore}>5、点击获取存储值：{passStrbyStore}</Button>
     </View>
   );
 }

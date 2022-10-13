@@ -1,15 +1,10 @@
 import { makeAutoObservable } from "mobx"
 
 class MyStore {
-    selected = 0
-    testNumber: number = 0
+    mobxStr:string=""
 
-    changeSelectedTab = (index: number) => {
-        this.selected = index;
-    };
-
-    changeTestNumber=(index:number)=>{
-        this.testNumber = index
+    changeMobxStr =(str:string)=>{
+      this.mobxStr = str;
     }
 
     constructor() {

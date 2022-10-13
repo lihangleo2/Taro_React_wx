@@ -1,9 +1,13 @@
 import { Button, View } from "@tarojs/components";
 import Taro, { getCurrentPages, useDidShow } from "@tarojs/taro";
 import React, { useState } from "react";
+import { observer } from "mobx-react";
 import { navigateTo } from "../../utils/navigateUtils";
 import { PagesPath } from "../../config/pagePath";
 import "./index.scss";
+import { setSp } from "../../utils/storageUtil";
+import { spKey } from "../../config/spKey";
+import { useStores } from "../../hooks/index";
 
 function ValuePass() {
 
@@ -52,6 +56,21 @@ function ValuePass() {
   })
 
 
+  /**
+   * 【5】通过内部存储也可以进行传值
+   */
+  function passByStore(){
+    setSp(spKey.passValue,"存储传递数据")
+    navigateTo(PagesPath.valuePassSon)
+  }
+
+  /**
+   * 【6】通过mobx获取的值
+   */
+  const {
+    MyStore: { mobxStr, changeMobxStr },
+  } = useStores();
+
   return (
     <View className='valuePass'>
       <Button onClick={valuePassByTaro}>1、向子页面传值(通过Taro事件)</Button>
@@ -64,6 +83,9 @@ function ValuePass() {
       <View className='text_content'>
         获取到的数据：{sonPassValueByUrl}
       </View>
+      <Button className='button_margin' onClick={passByStore}>5、通过内部存储也可以进行传值</Button>
+
+      <Button className='button_margin' >6、通过mobx获取的值：{mobxStr}</Button>
     </View>
   );
 }
@@ -73,4 +95,4 @@ definePageConfig({
   navigationBarTextStyle: "white",
   navigationBarBackgroundColor: "#FF716F", //导航栏背景颜色
 });
-export default ValuePass;
+export default observer(ValuePass);
