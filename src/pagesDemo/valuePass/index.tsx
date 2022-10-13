@@ -40,14 +40,15 @@ function ValuePass() {
     navigateTo(`${PagesPath.valuePassSon}?isFromTimer=true&taskId=32`)
   }
 
+
+  /**
+   * 【4】获取子页面传递的数据(通过url)
+   */
   useDidShow(()=>{
     var pages = getCurrentPages();
     const current = pages[pages.length - 1];
     const data = current.data
     setSonPassValueByUrl(data.keyData)
-    console.log('===============我是这种方式=====================');
-    console.log(data.keyData);
-    console.log('====================================');
   })
 
 

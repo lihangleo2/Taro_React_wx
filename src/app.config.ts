@@ -3,8 +3,6 @@ export default defineAppConfig({
   pages: [
     'pagesDemo/home/index',
     'pages/home/index',
-    'pages/task/index',
-    'pages/taskCenter/index',
     'pages/regist/index',
     'pages/robotlist/index',
     'pages/scanrobot/index',
