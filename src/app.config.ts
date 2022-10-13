@@ -9,7 +9,8 @@ export default defineAppConfig({
     'pages/robotlist/index',
     'pages/scanrobot/index',
     'pagesDemo/lifeHook/index',
-
+    'pagesDemo/valuePass/index',
+    'pagesDemo/valuePassSon/index',
   ],
   tabBar: {
     // custom: true,

@@ -33,6 +33,7 @@ function DemoHome() {
 return (
   <View>
     <Button onClick={()=>navigateTo(PagesPath.lifeHook)}>hook生命周期，函数组件开发介绍</Button>
+    <Button onClick={()=>navigateTo(PagesPath.valuePass)}>各种页面间的传值</Button>
     <View onClick={() => changeTestNumber(52)}>
       点击，设置mobx状态管理存储数据
     </View>
