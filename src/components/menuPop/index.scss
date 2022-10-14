@@ -1,0 +1,74 @@
+.menu{
+  .at-float-layout__container {
+    min-height: 100rpx;
+}
+
+
+  .menu_pop{
+
+    .menu_title{
+      font-size: 34px;
+      font-family: PingFang SC-Heavy, PingFang SC;
+      font-weight: 800;
+      color: #222222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+    }
+  
+    .menu_content{
+      margin-top: 30px;
+      display: flex;
+  
+      .menu_space{
+        flex: 1;
+      }
+  
+      .menu_item{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        .menu_image{
+          width: 120px;
+          height: 120px;
+        }
+  
+        .menu_text{
+          font-size: 24px;
+          font-family: PingFang SC-Bold, PingFang SC;
+          font-weight: bold;
+          color: #797979;
+        }
+  
+      }
+
+      .menu_item_hide{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+  
+        .menu_image{
+          width: 120px;
+          height: 120px;
+        }
+  
+        .menu_text{
+          font-size: 24px;
+          font-family: PingFang SC-Bold, PingFang SC;
+          font-weight: bold;
+          color: #797979;
+        }
+  
+      }
+  
+    }
+  
+  }
+}
+
+
