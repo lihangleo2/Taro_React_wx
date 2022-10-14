@@ -16,6 +16,9 @@ npm add mobx-react
 
 ### 1.4、tsx文件里输入wx会自动输入代码模板(vscode做了代码配置)
 
+### 1.5、安装taro-ui
+npm install taro-ui
+
 
 ## 二、项目结构介绍
 ### 2.1、【action】

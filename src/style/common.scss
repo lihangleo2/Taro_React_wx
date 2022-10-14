@@ -1,0 +1,99 @@
+$colgateColor: var(--colgateColor);
+$defaultBorderHeight: 1px;
+
+$borderLgRaduis: 8px;
+$borderMdRaduis: 12px;
+
+$btnLgHeight: 88px;
+$btnMdheight: 72px;
+
+$phoneXDistance: 60px;
+
+@function getcolgateColorOpacity($opacity) {
+  @return rgba($colgateColor, $opacity);
+}
+
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin content-wrap {
+  padding: 0 34px;
+}
+
+@mixin reset-button($wd, $lh) {
+  padding: 0;
+  width: $wd;
+  height: $lh;
+  text-align: center;
+  line-height: $lh;
+}
+
+@mixin vertHoriz($width, $height) {
+  width: $width;
+  text-align: center;
+  height: $height;
+  line-height: $height;
+}
+
+@mixin flexWrap($justify-content: space-between, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// Px是微信不会转换的单位，保证大小始终固定，以免rpx随着屏幕分辨率变化
+/* prettier-ignore */
+@mixin borderBottomLine($color: #f4f4f4, $height: 1Px) {
+  border-bottom: $height solid $color;
+}
+
+/* prettier-ignore */
+@mixin borderTopLine($color: #f4f4f4, $height: 1Px) {
+  border-top: $height solid $color;
+}
+
+/* prettier-ignore */
+@mixin borderLeftLine($color: #f4f4f4, $height: 1Px) {
+  border-left: $height solid $color;
+}
+
+/* prettier-ignore */
+@mixin borderRightLine($color: #f4f4f4, $height: 1Px) {
+  border-right: $height solid $color;
+}
+
+/* prettier-ignore */
+@mixin borderLine($color: #f4f4f4, $height: 1Px) {
+  border: $height solid $color;
+}
+
+@mixin dinBold() {
+  font-family: DINAlternate-Bold, DINAlternate, PingFangSC-Regular, PingFang SC;
+}
+
+@mixin specialFont($fontName) {
+  font-family: $fontName, DINAlternate, PingFangSC-Regular, PingFang SC;
+}
+
+@mixin AlibabaB() {
+  font-family: AlibabaPuHuiTiB, PingFangSC-Regular, PingFang SC;
+}
+
+@mixin AlibabaM() {
+  font-family: Alibaba-PuHuiTi-M, Alibaba-PuHuiTi, PingFangSC-Regular,
+    PingFang SC;
+}
+
+/* prettier-ignore */
+@mixin lineClamp($lines: 1) {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
