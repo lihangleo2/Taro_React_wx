@@ -3,7 +3,7 @@
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    // 加上一下两句，格式话代码。单引号就不会变双引号，导致的报红了
+    // 加上以下两句，格式话代码。单引号就不会变双引号，导致的报红了
     "jsx-quotes": ["error", "prefer-double"]
   }
 }

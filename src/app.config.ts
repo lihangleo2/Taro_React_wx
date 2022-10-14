@@ -12,6 +12,8 @@ export default defineAppConfig({
     'pagesDemo/toastUi/index',
     'pagesDemo/network/index',
     'pagesDemo/uiAbout/index',
+    'pagesDemo/bottomPop/index',
+    'pagesDemo/selectPop/index',
   ],
   tabBar: {
     // custom: true,

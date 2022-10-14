@@ -9,7 +9,6 @@ function LifeHook() {
    *  */
   const [myNumber, setMyNumber] = useState<string>("1");
 
-
   /**
    * 【2】
    *  */
@@ -28,7 +27,6 @@ function LifeHook() {
     console.log(`myNumber数据发生变化 ====>${myNumber}`);
   }, [myNumber]);
 
-  
   /**
    * 【3】
    *  */
@@ -37,7 +35,6 @@ function LifeHook() {
     console.log("每次回到这个页面都会触发");
   });
 
-
   /**
    * 【4】
    *  */
@@ -45,7 +42,6 @@ function LifeHook() {
   useDidHide(() => {
     console.log("每次离开页面都会触发");
   });
-
 
   /**
    * 【5】
@@ -75,50 +71,60 @@ function LifeHook() {
     };
   }, []);
 
-
   //【5.2】
   const domRef = useRef<HTMLInputElement>(null);
 
   return (
-    <View className='lifeHook'>
-      <View className='text_title'>{myNumber}、useState</View>
-      <View className='text_content'>
+    <View className="lifeHook">
+      <View className="text_title">{myNumber}、useState</View>
+      <View className="text_content">
         1.1、有点类似android中的数据绑定，会自动更新页面。括号的值是初始化值
       </View>
-      <View className='text_content'>
+      <View className="text_content">
         1.2、注意：通过set(a)后，下一句代码直接使用useState的值是不行的，如果要用就用值a
       </View>
       <Button onClick={() => setMyNumber("⑴")}>点击设置标题为⑴</Button>
 
-      <View className='text_title_second'>2、useEffect</View>
-      <View className='text_content'>
+      <View className="text_title_second">2、useEffect</View>
+      <View className="text_content">
         2.1、数据监听，根据后者[]里的参数变化触发，[]里可以监听多个参数
       </View>
-      <View className='text_content'>
+      <View className="text_content">
         2.2、如果[]是空的话，那么就是监听【页面进入】和【页面退出】
       </View>
 
-      <View className='text_title_second'>3、useDidShow</View>
-      <View className='text_content'>
+      <View className="text_title_second">3、useDidShow</View>
+      <View className="text_content">
         类似android中的onStart，每次进入页面都会触发，不管是新开页面还是从别的页面退回
       </View>
 
-      <View className='text_title_second'>4、useDidHide</View>
-      <View className='text_content'>
+      <View className="text_title_second">4、useDidHide</View>
+      <View className="text_content">
         类似android中的onPause，每次离开这个页面时都会触发
       </View>
 
-      <View className='text_title_second'>5、useRef</View>
-      <View className='text_content'>
+      <View className="text_title_second">5、useRef</View>
+      <View className="text_content">
         5.1、useRef返回一个ref对象，在整个生命周期内保持不变。其.current属性像一个保存值得盒子。比如useRef解决定时器在退出页面关不掉的问题
       </View>
       <Button>计时器时间{timeNumber}</Button>
-      <View className='text_content'>
+      <View className="text_content">
         5.2、可以直接获取dom元素操作dom。比如下方一个input,可以操作dom获取焦点
       </View>
       <View>
-        <Input ref={domRef} type='text' className='input_style'placeholder='请输入名字' />
-        <Button onClick={()=>{domRef.current?.focus();}}>Focus the input</Button>
+        <Input
+          ref={domRef}
+          type="text"
+          className="input_style"
+          placeholder="请输入名字"
+        />
+        <Button
+          onClick={() => {
+            domRef.current?.focus();
+          }}
+        >
+          Focus the input
+        </Button>
       </View>
     </View>
   );
@@ -127,6 +133,6 @@ definePageConfig({
   navigationBarTitleText: "hooks声明周期",
   navigationStyle: "default",
   navigationBarTextStyle: "white",
-  navigationBarBackgroundColor: "#FF716F", //导航栏背景颜色
+  navigationBarBackgroundColor: "#FF716F" //导航栏背景颜色
 });
 export default LifeHook;

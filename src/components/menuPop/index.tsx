@@ -1,17 +1,10 @@
 import { Image, View } from "@tarojs/components";
-import React from "react";
 import { AtFloatLayout } from "taro-ui";
 import menu_time from "../../assets/img/menu_time.png";
 import "./index.scss";
 
 function Index(props) {
-  const {
-    isShowMenuPop,
-    setIsShowMenuPop,
-    setIsShowVoice,
-    setIsShowBattery,
-    goHome
-  } = props;
+  const { isShowMenuPop, setIsShowMenuPop, itemClick } = props;
 
   return (
     <View className="menu">
@@ -27,7 +20,7 @@ function Index(props) {
             <View
               className="menu_item"
               onClick={() => {
-                goHome();
+                itemClick();
               }}
             >
               <Image className="menu_image" src={menu_time}></Image>
@@ -35,13 +28,23 @@ function Index(props) {
             </View>
 
             <View className="menu_space"></View>
-            <View className="menu_item">
+            <View
+              className="menu_item"
+              onClick={() => {
+                itemClick();
+              }}
+            >
               <Image className="menu_image" src={menu_time}></Image>
               <View className="menu_text">定时任务</View>
             </View>
 
             <View className="menu_space"></View>
-            <View className="menu_item">
+            <View
+              className="menu_item"
+              onClick={() => {
+                itemClick();
+              }}
+            >
               <Image className="menu_image" src={menu_time}></Image>
               <View className="menu_text">任务看板</View>
             </View>
@@ -53,7 +56,7 @@ function Index(props) {
             <View
               className="menu_item"
               onClick={() => {
-                setIsShowVoice(true);
+                itemClick();
               }}
             >
               <Image className="menu_image" src={menu_time}></Image>
@@ -64,7 +67,7 @@ function Index(props) {
             <View
               className="menu_item"
               onClick={() => {
-                setIsShowBattery(true);
+                itemClick();
               }}
             >
               <Image className="menu_image" src={menu_time}></Image>
@@ -72,7 +75,12 @@ function Index(props) {
             </View>
 
             <View className="menu_space"></View>
-            <View className="menu_item">
+            <View
+              className="menu_item"
+              onClick={() => {
+                itemClick();
+              }}
+            >
               <Image className="menu_image" src={menu_time}></Image>
               <View className="menu_text">关于Robot</View>
             </View>

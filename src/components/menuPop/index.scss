@@ -1,12 +1,24 @@
-.menu{
+.menu {
+
+  // 这是加上自适应高度，以及上围圆角
   .at-float-layout__container {
     min-height: 100rpx;
-}
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+
+  // 这是去掉四周间距
+  .at-float-layout .layout-body {
+    font-size: 28rpx;
+    padding: 0rpx;
+    max-height: 828rpx;
+    min-height: 514rpx;
+  }
 
 
-  .menu_pop{
-
-    .menu_title{
+  .menu_pop {
+    .menu_title {
+      padding-top: 18px;
       font-size: 34px;
       font-family: PingFang SC-Heavy, PingFang SC;
       font-weight: 800;
@@ -16,59 +28,57 @@
       justify-content: center;
       min-height: 70px;
     }
-  
-    .menu_content{
+
+    .menu_content {
       margin-top: 30px;
       display: flex;
-  
-      .menu_space{
+
+      .menu_space {
         flex: 1;
       }
-  
-      .menu_item{
+
+      .menu_item {
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-  
-        .menu_image{
+
+        .menu_image {
           width: 120px;
           height: 120px;
         }
-  
-        .menu_text{
+
+        .menu_text {
           font-size: 24px;
           font-family: PingFang SC-Bold, PingFang SC;
           font-weight: bold;
           color: #797979;
         }
-  
+
       }
 
-      .menu_item_hide{
+      .menu_item_hide {
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         visibility: hidden;
-  
-        .menu_image{
+
+        .menu_image {
           width: 120px;
           height: 120px;
         }
-  
-        .menu_text{
+
+        .menu_text {
           font-size: 24px;
           font-family: PingFang SC-Bold, PingFang SC;
           font-weight: bold;
           color: #797979;
         }
-  
+
       }
-  
+
     }
-  
+
   }
 }
-
-
