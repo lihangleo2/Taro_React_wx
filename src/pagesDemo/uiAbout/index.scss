@@ -1,0 +1,62 @@
+.uiAbout{
+
+    padding: 25px;
+
+    .text_title {
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .text_content {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .text_title_second {
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+
+    .select_true{
+        margin-left: 10px;
+        font-size: 26px;
+        font-family: PingFang SC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #FB605F ;
+    }
+
+    .select_false{
+        margin-left: 10px;
+        font-size: 26px;
+        font-family: PingFang SC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #B9B7B7;
+    }
+
+    .image {
+        padding: 30px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .button_style{
+        border-radius: 30px;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        background: #FB605F;
+    }
+
+    .button_style:hover{
+        background: #FB605F;
+    }
+
+    .button_style:active{
+        background: #B9B7B7;
+    }
+
+}

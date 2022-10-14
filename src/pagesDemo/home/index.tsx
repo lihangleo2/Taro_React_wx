@@ -34,6 +34,8 @@ function DemoHome() {
       <Button className='button_text' onClick={() => navigateTo(PagesPath.robotlist)}>跳转列表(列表的所有用法)</Button>
       <Button className='button_text' onClick={() => navigateTo(PagesPath.scanrobot)}>跳转input的一些用法</Button>
       <Button className='button_text' onClick={() => navigateTo(PagesPath.toastUi)}>showToast的用法</Button>
+      <Button className='button_text' onClick={() => navigateTo(PagesPath.network)}>联网的一些操作</Button>
+      <Button className='button_text' onClick={() => navigateTo(PagesPath.uiAbout)}>一些ui里的判断和用法</Button>
     </View>
   );
 }

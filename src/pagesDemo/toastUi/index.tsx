@@ -61,7 +61,7 @@ function ToastUi() {
   );
 }
 definePageConfig({
-  navigationBarTitleText: "数据传递父页面",
+  navigationBarTitleText: "toast的一些用法",
   navigationStyle: "default",
   navigationBarTextStyle: "white",
   navigationBarBackgroundColor: "#FF716F", //导航栏背景颜色

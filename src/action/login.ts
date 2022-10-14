@@ -1,7 +1,19 @@
 import fetch from "../api/request";
 import { spKey } from "../config/spKey";
-import { DataResponse, LoginModel, LoginRequest } from "../model/login.model";
+import { DataResponse, LoginModel, LoginRequest,RobotStageModel } from "../model/login.model";
 import { getSp } from "../utils/storageUtil";
+
+
+//获取机器状态
+export function onRobotStage(): Promise<DataResponse<RobotStageModel>> {
+  return fetch({
+    url: `假装是url`,
+    method: "GET",
+    showLoading: false,
+  });
+}
+
+
 
 //登录
 export function doLoginTask(loginRequest: LoginRequest): Promise<LoginModel> {

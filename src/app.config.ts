@@ -10,6 +10,8 @@ export default defineAppConfig({
     'pagesDemo/valuePass/index',
     'pagesDemo/valuePassSon/index',
     'pagesDemo/toastUi/index',
+    'pagesDemo/network/index',
+    'pagesDemo/uiAbout/index',
   ],
   tabBar: {
     // custom: true,
