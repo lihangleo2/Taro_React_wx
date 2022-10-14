@@ -72,25 +72,25 @@ function Regist() {
 
 
     return (
-        <View className='regist'>
-            <View className='layout_out'>
+        <View className="regist">
+            <View className="layout_out">
 
                 <View>
                     * 手机号码
-                    <View className='input'>
-                        <Image className='image'  src={login_show_pwd}></Image>
-                        <Input className='width' placeholder='请输入手机号' maxlength={11} type='number'>
+                    <View className="input">
+                        <Image className="image"  src={login_show_pwd}></Image>
+                        <Input className="width" placeholder="请输入手机号" maxlength={11} type="number">
                         </Input>
                     </View>
                 </View>
 
-                <View className='input_margin'>
+                <View className="input_margin">
                     * 密码
-                    <View className='input'>
-                        <Image className='image' src={login_show_pwd}></Image>
-                        <Input className='width' placeholder='请输入密码' password={isPassword}>
+                    <View className="input">
+                        <Image className="image" src={login_show_pwd}></Image>
+                        <Input className="width" placeholder="请输入密码" password={isPassword}>
                         </Input>
-                        <Image className='image' onClick={() => setIsPassword(!isPassword)} src={
+                        <Image className="image" onClick={() => setIsPassword(!isPassword)} src={
                             isPassword
                                 ? login_show_text
                                 : login_show_pwd
@@ -99,31 +99,31 @@ function Regist() {
                     </View>
                 </View>
 
-                <View className='input_margin'>
+                <View className="input_margin">
                     * 验证码
-                    <View className='input'>
-                        <Image className='image' src={login_show_pwd}></Image>
-                        <Input className='width' placeholder='请输入验证码' type='number'>
+                    <View className="input">
+                        <Image className="image" src={login_show_pwd}></Image>
+                        <Input className="width" placeholder="请输入验证码" type="number">
                         </Input>
 
-                        <View className='codeBtn' onClick={getPhoneCode}>
+                        <View className="codeBtn" onClick={getPhoneCode}>
                             {phoneCodeText}
                         </View>
                     </View>
                 </View>
 
 
-                <View className='input_margin'>
+                <View className="input_margin">
                     * 组织机构代码
-                    <View className='input'>
-                        <Image className='image' src={login_show_pwd}></Image>
-                        <Input className='width' placeholder='请输入组织机构代码' value={organCode} onInput={e => checkOrganCode(e.detail.value)}>
+                    <View className="input">
+                        <Image className="image" src={login_show_pwd}></Image>
+                        <Input className="width" placeholder="请输入组织机构代码" value={organCode} onInput={e => checkOrganCode(e.detail.value)}>
                         </Input>
                     </View>
                 </View>
 
 
-                <View className='remind_text'>
+                <View className="remind_text">
                     <View>
                         * 请确保手机号输入正确，注册后将无法修改！
                     </View>
@@ -134,14 +134,14 @@ function Regist() {
                 </View>
 
 
-                <View className='checkBox'>
+                <View className="checkBox">
                     <Radio onClick={checkRadio} checked={isChecked}></Radio >
                     我已阅读并同意
-                    <Text className='blue_text' onClick={goUserPro}>《用户协议》</Text>和 <Text onClick={goPrivatePro} className='blue_text'>《隐私协议》</Text>
+                    <Text className="blue_text" onClick={goUserPro}>《用户协议》</Text>和 <Text onClick={goPrivatePro} className="blue_text">《隐私协议》</Text>
                 </View>
 
 
-                <View className='regist_btn'>
+                <View className="regist_btn">
                     开始注册
                 </View>
             </View>

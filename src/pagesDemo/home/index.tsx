@@ -83,6 +83,13 @@ function DemoHome() {
       >
         选择弹窗的使用
       </Button>
+
+      <Button
+        className="button_text"
+        onClick={() => navigateTo(PagesPath.fullScreen)}
+      >
+        全屏的使用
+      </Button>
     </View>
   );
 }

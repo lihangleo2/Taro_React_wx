@@ -14,6 +14,7 @@ export default defineAppConfig({
     'pagesDemo/uiAbout/index',
     'pagesDemo/bottomPop/index',
     'pagesDemo/selectPop/index',
+    'pagesDemo/fullScreen/index',
   ],
   tabBar: {
     // custom: true,

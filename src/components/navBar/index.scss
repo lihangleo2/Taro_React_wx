@@ -1,0 +1,49 @@
+.container_root {
+
+  .container {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    background-color: white;
+
+    &.transparent {
+      background-color: transparent;
+    }
+
+    .nav {
+      height: 100%;
+      line-height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      box-sizing: border-box;
+      .left {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .title {
+        text-align: center;
+        flex-grow: 1;
+        font-size: 36px;
+        font-family: PingFang SC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #000000;
+
+        &.transparent {
+          color: white;
+        }
+      }
+
+      .right {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
