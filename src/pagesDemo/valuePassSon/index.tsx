@@ -73,18 +73,18 @@ function ValuePassSon() {
   }
 
   return (
-    <View className='valuePassSon'>
-      <View className='text_title'>1、获取父页面传递的数据(通过Taro事件)</View>
-      <View className='text_content'>
+    <View className="valuePassSon">
+      <View className="text_title">1、获取父页面传递的数据(通过Taro事件)</View>
+      <View className="text_content">
         获取到的数据：{passStr}
       </View>
-      <Button className='button_margin' onClick={passToFather}>2、向父页面传递数据(通过Taro事件)</Button>
-      <Button className='button_margin' onClick={getValueFromFather}>3、点击：获取父页面传递的数据(url方式)</Button>
-      <View className='text_content'>
+      <Button className="button_margin" onClick={passToFather}>2、向父页面传递数据(通过Taro事件)</Button>
+      <Button className="button_margin" onClick={getValueFromFather}>3、点击：获取父页面传递的数据(url方式)</Button>
+      <View className="text_content">
         获取到的数据：{passStrbyUrl}
       </View>
-      <Button className='button_margin' onClick={passToFatherByUrl}>4、向父页面传递数据(url方式)</Button>
-      <Button className='button_margin' onClick={getPassValueByStore}>5、点击获取存储值：{passStrbyStore}</Button>
+      <Button className="button_margin" onClick={passToFatherByUrl}>4、向父页面传递数据(url方式)</Button>
+      <Button className="button_margin" onClick={getPassValueByStore}>5、点击获取存储值：{passStrbyStore}</Button>
     </View>
   );
 }

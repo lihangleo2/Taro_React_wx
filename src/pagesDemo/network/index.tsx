@@ -1,6 +1,4 @@
 import { Button, View } from "@tarojs/components";
-import React from "react";
-// import { onRobotStage } from "src/action/login";
 import { onRobotStage } from "../../action/login";
 import "./index.scss";
 

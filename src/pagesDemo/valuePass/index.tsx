@@ -72,20 +72,20 @@ function ValuePass() {
   } = useStores();
 
   return (
-    <View className='valuePass'>
+    <View className="valuePass">
       <Button onClick={valuePassByTaro}>1、向子页面传值(通过Taro事件)</Button>
-      <View className='text_title_second'>2、获取子页面传递的数据(通过Taro事件)</View>
-      <View className='text_content'>
+      <View className="text_title_second">2、获取子页面传递的数据(通过Taro事件)</View>
+      <View className="text_content">
         获取到的数据：{sonPassValue}
       </View>
-      <Button className='button_margin' onClick={valuePassByUrl}>3、向子页面传值(通过url)</Button>
-      <View className='text_title_second'>4、获取子页面传递的数据(通过url)</View>
-      <View className='text_content'>
+      <Button className="button_margin" onClick={valuePassByUrl}>3、向子页面传值(通过url)</Button>
+      <View className="text_title_second">4、获取子页面传递的数据(通过url)</View>
+      <View className="text_content">
         获取到的数据：{sonPassValueByUrl}
       </View>
-      <Button className='button_margin' onClick={passByStore}>5、通过内部存储也可以进行传值</Button>
+      <Button className="button_margin" onClick={passByStore}>5、通过内部存储也可以进行传值</Button>
 
-      <Button className='button_margin' >6、通过mobx获取的值：{mobxStr}</Button>
+      <Button className="button_margin" >6、通过mobx获取的值：{mobxStr}</Button>
     </View>
   );
 }

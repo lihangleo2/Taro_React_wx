@@ -1,6 +1,6 @@
 import { Button, Input, View } from "@tarojs/components";
 import { useDidHide, useDidShow } from "@tarojs/taro";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./index.scss";
 
 function LifeHook() {

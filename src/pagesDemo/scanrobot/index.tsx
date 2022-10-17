@@ -1,5 +1,4 @@
-import { View, Image, Input } from '@tarojs/components'
-import React from 'react';
+import { Image, Input, View } from '@tarojs/components';
 import "./index.scss";
 
 /**
@@ -12,47 +11,47 @@ function FindNewRobot() {
   const image_next ="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAOVBMVEUAAAD/bWz/bW3/a2n/cG7/bmv/bmv/bWv/b2z/bGz/bWv/aWn/Z2f/bGz/dGj/cXH/bW38Xl38YF+K6YckAAAAEXRSTlMA8Cfw/VjczVpXxWQ+LRYSB9Iyk7MAAAA5SURBVBjTY+BhE2CAA3YhRiY4h4lRkK48PmYhdjiHRZCZF4nNgYPNSi6bS4iZE24ZNxuQDQf8CCYAU6sCaAu1ZQUAAAAASUVORK5CYII="
 
   return (
-    <View className='scanrobot'>
-      <View className='layout_container'>
-        <View className='item_fist_line'>
+    <View className="scanrobot">
+      <View className="layout_container">
+        <View className="item_fist_line">
           <Image
             src={login_show_pwd}
-            className='image_robot'
+            className="image_robot"
           ></Image>
-          <View className='right_layout'>
-            <View className='text_bold'>
+          <View className="right_layout">
+            <View className="text_bold">
               卡冈图雅·灵柩系列消杀机器人
             </View>
 
-            <View className='space'></View>
-            <View className='text_style'>
+            <View className="space"></View>
+            <View className="text_style">
               型号:Vista - v5
             </View>
 
-            <View className='tag_style'>
+            <View className="tag_style">
               经济版
             </View>
           </View>
         </View>
 
-        <View className='input_margin'>
+        <View className="input_margin">
           场景名称：
-          <View className='input'>
-            <Input className='width' placeholder='场景名称' disabled onClick={()=>{console.log("111111")}}>
+          <View className="input">
+            <Input className="width" placeholder="场景名称" disabled onClick={()=>{console.log("111111")}}>
             </Input>
-            <Image className='image' src={image_next}></Image>
+            <Image className="image" src={image_next}></Image>
           </View>
-          <View className='remind_text'>您希望机器放置的位置，如：虹桥机场C区</View>
+          <View className="remind_text">您希望机器放置的位置，如：虹桥机场C区</View>
         </View>
 
-        <View className='input_margin'>
+        <View className="input_margin">
           机场名称：
-          <View className='input'>
-            <Input className='width' placeholder='填写机器名'>
+          <View className="input">
+            <Input className="width" placeholder="填写机器名">
             </Input>
-            <Image className='image' src={image_next}></Image>
+            <Image className="image" src={image_next}></Image>
           </View>
-          <View className='remind_text'>小名，如：C区老二</View>
+          <View className="remind_text">小名，如：C区老二</View>
         </View>
 
 

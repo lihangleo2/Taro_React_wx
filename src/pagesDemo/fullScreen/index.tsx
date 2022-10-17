@@ -8,6 +8,9 @@ import "./index.scss";
 function FullScreen() {
   return (
     <View className="fullScreen">
+      {/* 自定义状态栏的使用：
+      1、这里具体的使用是，全透明状态栏的使用
+      2、当然也可以不是全屏及全透明状态的用法 */}
       <NavBar
         title="透明状态栏的使用"
         isTransparent

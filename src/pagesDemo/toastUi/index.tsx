@@ -38,23 +38,23 @@ function ToastUi() {
 
   return (
     <View>
-      <Button className='button_margin' onClick={() => showToast("成功了", 1)}>
+      <Button className="button_margin" onClick={() => showToast("成功了", 1)}>
         显示成功
       </Button>
       <Button
-        className='button_margin'
+        className="button_margin"
         onClick={() => showTextToast("纯文字的显示")}
       >
         显示纯文字
       </Button>
 
-      <Button className='button_margin' onClick={() => testAbout()}>
+      <Button className="button_margin" onClick={() => testAbout()}>
         显示模态弹窗(即android的dialog)
       </Button>
-      <Button className='button_margin' onClick={() => showMyLoading()}>
+      <Button className="button_margin" onClick={() => showMyLoading()}>
         显示加载loading
       </Button>
-      <Button className='button_margin' onClick={() => showMyActionSheet()}>
+      <Button className="button_margin" onClick={() => showMyActionSheet()}>
         显示ActionSheet
       </Button>
     </View>

@@ -1,7 +1,7 @@
 import { Button, View } from "@tarojs/components";
-import React, { useState } from "react";
-import { showTextToast } from "../../utils/toastUtils";
+import { useState } from "react";
 import { MenuPop } from "../../components";
+import { showTextToast } from "../../utils/toastUtils";
 import "./index.scss";
 
 function BottomPop() {

@@ -55,7 +55,7 @@ function RobotList() {
   }
 
   return (
-    <View className='robotlist'>
+    <View className="robotlist">
       {routeList.map((item, index) => (
         <AtSwipeAction
           autoClose
@@ -77,16 +77,16 @@ function RobotList() {
             }
           ]}
         >
-          <View key={item.itinerary_id} className='item_layout'>
+          <View key={item.itinerary_id} className="item_layout">
             <View>
-              <View className='title_name'>{item.name}</View>
-              <View className='title_content'>消杀模式：巡游消毒/巡游2次</View>
-              <View className='title_content'>消毒路线：茶水间、会议室</View>
+              <View className="title_name">{item.name}</View>
+              <View className="title_content">消杀模式：巡游消毒/巡游2次</View>
+              <View className="title_content">消毒路线：茶水间、会议室</View>
             </View>
 
-            <View className='setting_layout'>
+            <View className="setting_layout">
               <Image
-                className='setting_image'
+                className="setting_image"
                 src={item.enable ? path_select : path_no_select}
               ></Image>
               <View

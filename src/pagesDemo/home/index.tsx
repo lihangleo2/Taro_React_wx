@@ -1,10 +1,8 @@
 import { Button, View } from "@tarojs/components";
-import Taro from "@tarojs/taro";
 import { observer } from "mobx-react";
-import React from "react";
-import { navigateTo } from "../../utils/navigateUtils";
 import { PagesPath } from "../../config/pagePath";
 import { useStores } from "../../hooks";
+import { navigateTo } from "../../utils/navigateUtils";
 import "./index.scss";
 
 function DemoHome() {
