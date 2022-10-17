@@ -22,7 +22,9 @@ npm install taro-ui
 
 ## 二、项目结构介绍
 ### 2.1、【action】
-里面的ts文件放的是一些联网操作，有点像Android里的ViewModule.class，可以用多个ts文件进行区分
+里面的ts文件放的是一些联网操作，有点像Android里的ViewModule.class，可以用多个ts文件进行区分。
+* help.ts 暂时放的是图片加载的一些封装
+* login.ts 放的是登录界面的一些联网请求
 
 ### 2.2、【api】
 里面放的就是我们的baseUrl域名及url地址(可以稍作封装根据dev还是build去使用baseUrl)
