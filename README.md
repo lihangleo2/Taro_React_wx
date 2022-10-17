@@ -28,9 +28,14 @@ npm install taro-ui
 
 ### 2.2、【api】
 里面放的就是我们的baseUrl域名及url地址(可以稍作封装根据dev还是build去使用baseUrl)
+* config.tsx baseUrl和接口文档Url的配置文件
+* interceptor.ts 网络连接的拦截器，目前做的操作有：如果token失效，将当前的失败的接口请求数据存起来，自动刷新完token后，进行联网。如果是token异常，那么则跳入到登录界面
+* request.ts 联网请求的封装都在这里。
 
-### 2.3、【assets\img】 
-一些本地图片的使用，tabbar上的图片。本demo中暂时把用的图片放在这里，真正要用的时候，是放在oss里的。
+### 2.3、【assets】 
+一些本地资源及图片的使用，tabbar上的图片。本demo中暂时把用的图片放在这里，真正要用的时候，是放在oss里的。
+* img 本地图片(tab上的图片，一般能再oss上放置的就不要放在本地)
+
 ```xml
 本地图片的使用：
 导入本地图片
@@ -43,29 +48,51 @@ import login_show_text from "../../assets/img/login_show_text.png";
 当然我们可以封装一下，直接使用如下：
 <Image className="noTask_img" src={getOssPath("20220815/robot_inline.png")}></Image>
 ```
-            
-### 2.4、【config】
+
+
+### 2.4、【components】自定义组件
+* batteryUpdate 电量阀值,类似android中选择pop的使用
+* menuPop 操作面板pop，类似底部弹出的pop
+* navBar 自定义toolBar，可为全屏界面提供全透明toolBar等
+* index.ts 这个界面的意思就是多个自定义组件通过index文件返回出去，那么在别的界面引用自定义组件只要引用这个index文件就行了
+
+### 2.5、【config】
 自定义的路由地址，写在这里的意思是，在页面中使用的时候不要总是引用全路径。项目的路由地址其实是要在app.config.ts里写上的
+* pagePath.ts 将项目中所有路由地址放在这里，以后跳转某个页面则可直接用，不用每次写全路径，导致搞错
+* spKey.ts 内部存储的一些key值，当然可以放一些全局使用的list，或者可以定义类似的文件存放别的值，达到解耦
 
-
-### 2.5、【hooks】
+### 2.6、【hooks】
 自定义的hook方式，用以搭配mobx使用，即在整个项目中用hook的方式拿到mobx的状态在全局使用。(在demo中【store】包下定义了myStore.tsx进行了mobx状态管理，当然可以定义多个hook方法，如果能力达到的话，用index.ts进行返回。mobx状态管理有点类似android中的全局单例，可以再全局中拿状态使用)
+* useStores.ts 自定义hook方式用以获取mobx状态存储
+* index.ts 将自定义hook，通过一依赖文件返回出去。
 
-### 2.6、【pages】存放业务代码;【pagesDemo】存放demo的一些页面
+### 2.7、【model】
+存放数据类型，一般用以在联网请求的数据类型。
+* common.model.ts 本地用的list数据，其实这个最好是放在配置文件config里
+* login.model.ts 登录相关所用到的数据类型
 
-### 2.7、【store】
+### 2.8、【pages】存放业务代码;
+* home 目前值放了home页面
+
+### 2.9、【pagesDemo】
+存放demo展示的所有代码
+
+### 2.10、【store】
 mobx状态管理，有点类似android中的静态单例，可以再全局中都能拿到状态使用。当然这里的store可以定义多个，并用index.tsx进行返回
 
-### 2.8、【utils】
+### 2.11、【style】
+一些自定义的样式，在common.scss里；比如上分割线就可以使用@include borderTopLine(#efefef, 1px);注意此配置在与src通层的config/index.js里
+
+### 2.12、【utils】
 代码工具类
 
-### 2.9、[app.config.ts]
+### 2.13、[app.config.ts]
 路由地址，有点像android的清单文件，如排在文件第一个位置，则是小程序的入口位置；tabbar的设置，及全局的一些页面样式设置
 
-### 2.10、[app.scss]
-全局的scss样式，即css样式
+### 2.14、[app.scss]
+全局的scss样式，即css样式。这里首先将taro-ui中使用的样式引入了。
 
-### 2.11、[app.tsx]
+### 2.15、[app.tsx]
 入口文件，有点类似android的application。这里已经搭配mobx做了一些操作
 
 
